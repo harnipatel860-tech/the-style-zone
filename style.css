@@ -1,0 +1,553 @@
+/* ===== THE STYLE ZONE ===== */
+
+:root {
+    --gold: #c9a56a;
+    --gold-dark: #a98449;
+    --black: #171715;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --text: #33312d;
+    --muted: #77736c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.navbar {
+    min-height: 82px;
+    padding: 15px 7%;
+    background: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.logo-icon {
+    color: var(--gold);
+    font-size: 34px;
+}
+
+.logo small {
+    display: block;
+    text-align: center;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #f5f0e7;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-button,
+.primary-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #e0c18e;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(15, 15, 14, 0.88), rgba(15, 15, 14, 0.25)),
+        url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 500px;
+    color: #eee8de;
+    margin-bottom: 28px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 85px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title > p {
+    color: var(--gold-dark);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
+
+.section-title h2 {
+    color: var(--black);
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.about-image {
+    min-height: 370px;
+    border-radius: 8px;
+    background:
+        url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85")
+        center/cover no-repeat;
+}
+
+.about-text h3 {
+    color: var(--black);
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.about-text .primary-button {
+    margin-top: 8px;
+}
+
+/* SERVICES */
+
+.services {
+    background: #eee7db;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px 24px;
+    background: var(--white);
+    border: 1px solid #eee5d8;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    color: var(--black);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 13px;
+    min-height: 66px;
+    margin-bottom: 20px;
+}
+
+.service-button {
+    display: inline-block;
+    padding: 9px 20px;
+    background: var(--black);
+    color: var(--gold);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.service-button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.price-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+/* GALLERY */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    background: #ddd4c6;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 35px 18px 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* CONTACT / APPOINTMENT */
+
+.contact {
+    background: #eee7db;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.contact-info {
+    padding-top: 15px;
+}
+
+.contact-info h3 {
+    font-size: 35px;
+    line-height: 1.3;
+    color: var(--black);
+    margin-bottom: 18px;
+}
+
+.contact-info > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contact-details p {
+    margin: 13px 0;
+    font-size: 14px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form label {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 13px 0 6px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ded9d0;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold-dark);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.form-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#formMessage {
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--black);
+    padding: 35px 20px;
+    text-align: center;
+    color: #d7d0c5;
+    font-size: 13px;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: #a7a096;
+    font-size: 12px;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+
+.whatsapp-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    font-size: 30px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.08);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        font-size: 28px;
+    }
+
+    .nav-button {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 6%;
+        background-position: center;
+    }
+
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-image {
+        min-height: 280px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card p {
+        min-height: auto;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-item {
+        height: 180px;
+    }
+
+    .contact-form {
+        padding: 22px 18px;
+    }
+
+    .contact-info h3 {
+        font-size: 29px;
+    }
+}
+/* The Style Zone service prices */
+
+.service-price {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--gold-dark);
+    margin: 15px 0;
+}
